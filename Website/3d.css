@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display:flex; justify-content:center; align-items: center; flex-wrap: wrap;
+  background-image: radial-gradient( #ff7, #500 );
+	perspective: 1000px;
+	
+}
+
+.audio { position: absolute; width: 20px;}
+.scene, .object {
+  user-select: none;
+  transform-style: preserve-3d;
+}
+
+.object {
+	position: absolute;
+	
+}
+
+#buttons{
+	top:10px;
+	left: 10px;
+	position: absolute;
+}
+.musicBTN{ color:red;
+	 background-color: #DA1216; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 10px;
+	
+	
+}
+
+.musicBTN:hover{
+	color:yellow;
+	background-color: #EA6A45;
+}
+.scene{ width: 300px; height: 500px; 
+	transform: rotateY( 25deg );
+	transform: rotateX( -25deg );
+	transform:translate3d( -25px, 205px, -25px );
+	
+}
+	
+
+.face { position:absolute; }
+
+
+.arm { width:70px; height:140px; transform: translate3d( -20px, 230px, 0px ); 
+animation: 1s swing-arm ease-in-out infinite alternate;
+	transform-origin: 50% 0% 0px;
+
+}
+
+
+
+.toaster { width:300px ; height: 300px; transform: rotateY( 0deg ); 
+}
+.toaster .front  {width: 100%; transform: rotateY( 0deg )   translate3d( 0px, 0px, 80px ); }
+.toaster .back   { width: 100%; transform: rotateY( 180deg ) translate3d( 0px, 0px, 80px ); }
+.toaster .top    { width: 100%; transform: rotateX( 90deg )  translate3d( 0px, 0px, 80px ); }
+.toaster .bottom { width: 100%; transform: rotateX( -90deg ) translate3d( 0px, 0px, 121px ); }
+.toaster .left   { width: 54%; transform: rotateY( -90deg ) translate3d( 0px, 0px, 80px ); }
+.toaster .right  { width: 54%; transform: rotateY( 90deg )  translate3d( 0px, 0px, 218px ); }
+
+
+
+.button { width:25px ; height: 5px; transform: rotateY( 0deg )   translate3d( 230px, 150px, 82px ); }
+.button .front  {width: 100%; transform: rotateY( 0deg )   translate3d( 0px, -1px, 3px ); }
+.button .top    { width: 100%; transform: rotateX( 90deg )  translate3d( 0px, 0px, 4px ); }
+.button .left   { width: 25%; transform: rotateY( -90deg ) translate3d( 0px, -1px, 3px ); }
+.button .right  { width: 25%; transform: rotateY( 90deg )  translate3d( 0px, -1px, 20px ); }
+
+.dial { width:25px ; height: 5px; transform: rotateY( 90deg )translate3d( 45px, 165px, -13px ); }
+.dial .front  {width: 100%; transform: rotateY( 0deg )  rotateZ(0deg)  translate3d( 0px, 0px, 0px ); }
+
+
+
+.tstrInsideOFF { width:200px ; height: 230px; }
+.tstrInsideOFF .front  {width: 100%; transform: rotateY( 0deg )   translate3d( 50px, 1px, 61px ); }
+.tstrInsideOFF .back   { width: 100%; transform: rotateY( 180deg ) translate3d( -50px, 1px, 61px ); }
+.tstrInsideOFF .midfront  {width: 100%; transform: rotateY( 0deg )   translate3d( 50px, 1px, 6px ); }
+.tstrInsideOFF .midback   { width: 100%; transform: rotateY( 180deg ) translate3d( -50px, 1px, 6px ); }
+
+.tstrInsideOFF .left   { width: 59%; transform: rotateY( -90deg ) translate3d( 0px, 1px, -184px ); }
+.tstrInsideOFF .right  { width: 59%; transform: rotateY( 90deg )  translate3d( 0px, 1px, -4px ); }
+
+
+
+.tstrInsideON {  width:200px ; height: 230px; }
+.tstrInsideON .front  {width: 100%; transform: rotateY( 0deg )   translate3d( 50px, 1px, 60px ); }
+.tstrInsideON .back   { width: 100%; transform: rotateY( 180deg ) translate3d( -50px, 1px, 60px ); }
+.tstrInsideON .midfront  {width: 100%; transform: rotateY( 0deg )   translate3d( 50px, 1px, 6px ); }
+.tstrInsideON .midback   { width: 100%; transform: rotateY( 180deg ) translate3d( -50px, 1px, 6px ); }
+
+.tstrInsideON .left   { width: 59%; transform: rotateY( -90deg ) translate3d( 0px, 1px, -184px ); }
+.tstrInsideON .right  { width: 59%; transform: rotateY( 90deg )  translate3d( 0px, 1px, -4px ); }
+
+
+
+.rawtoast1 .front, .rawtoast1 .back, .rawtoast1 .top, .rawtoast1 .left, .rawtoast1 .right, .rawtoast2 .front, .rawtoast2 .back, .rawtoast2 .top, .rawtoast2 .left, .rawtoast2 .right{opacity:1; transform: translate3d( 50px, 1px, 60px ); } 
+.cooktoast1 .front, .cooktoast1 .back, .cooktoast1 .top, .cooktoast1 .left, .cooktoast1 .right,.cooktoast2 .front, .cooktoast2 .back, .cooktoast2 .top, .cooktoast2 .left, .cooktoast2 .right{opacity:0; }
+.burnttoast1 .front, .burnttoast1 .back, .burnttoast1 .top, .burnttoast1 .left, .burnttoast1 .right, .burnttoast2 .front, .burnttoast2 .back, .burnttoast2 .top, .burnttoast2 .left, .burnttoast2 .right{ opacity:0.0;}
+
+
+
+.rawtoast1 ,.cooktoast1, .burnttoast1 { width: 142px; height: 142px;  transform: rotateY( 0deg ) translate3d( 80px, -97px, 32px );  }
+.rawtoast1 .front, .cooktoast1 .front, .burnttoast1 .front {width: 100%; transform: rotateY( 0deg ) translate3d( 0px, 0px, 12px ); }
+.rawtoast1 .back, .cooktoast1 .back,  .burnttoast1 .back  {width: 100%; transform: rotateY( 180deg ) translate3d( 0px, 0px,12px ); }
+.rawtoast1 .top, .cooktoast1 .top, .burnttoast1 .top{ width: 100%;transform: rotateX( 90deg )  translate3d( 0px, 0px, 12px ); }
+.rawtoast1 .left, .cooktoast1 .left , .burnttoast1 .left{ width: 17.2%;transform: rotateY( -90deg ) translate3d( 0px, 0px, 12px ); }
+.rawtoast1 .right, .cooktoast1 .right, .burnttoast1 .right { width: 17.2%;transform: rotateY( 90deg ) translate3d( 0px, 0px, 130px ); }
+
+.rawtoast2 ,.cooktoast2, .burnttoast2 { width: 142px; height: 142px;  transform: rotateY( 0deg ) translate3d( 80px, -97px, -32px );  }
+.rawtoast2 .front, .cooktoast2 .front, .burnttoast2 .front {width: 100%; transform: rotateY( 0deg ) translate3d( 0px, 0px, 12px ); }
+.rawtoast2 .back, .cooktoast2 .back,  .burnttoast2 .back  {width: 100%; transform: rotateY( 180deg ) translate3d( 0px, 0px,12px ); }
+.rawtoast2 .top, .cooktoast2 .top, .burnttoast2 .top{ width: 100%;transform: rotateX( 90deg )  translate3d( 0px, 0px, 12px ); }
+.rawtoast2 .left, .cooktoast2 .left , .burnttoast2 .left{ width: 17.2%;transform: rotateY( -90deg ) translate3d( 0px, 0px, 12px ); }
+.rawtoast2 .right, .cooktoast2 .right, .burnttoast2 .right { width: 17.2%;transform: rotateY( 90deg ) translate3d( 0px, 0px, 130px ); }
+
+
+
+.cooktoast1 {width: 142px; height: 142px;  transform: rotateY( 0deg ) translate3d( 80px, -97px, 32px );  }
+.cooktoast1 .front {width: 100%; transform: rotateY( 0deg ) translate3d( 0px, 0px, 12px ); }
+.cooktoast1 .back {width: 100%; transform: rotateY( 180deg ) translate3d( 0px, 0px,12px ); }
+.cooktoast1 .top { width: 100%;transform: rotateX( 90deg )  translate3d( 0px, 0px, 12px ); }
+
+.cooktoast1 .left { width: 17.2%;transform: rotateY( -90deg ) translate3d( 0px, 0px, 12px ); }
+.cooktoast1 .right { width: 17.2%;transform: rotateY( 90deg ) translate3d( 0px, 0px, 130px ); }
+
+.burnttoast1 { width: 142px; height: 142px;  transform: rotateY( 0deg ) translate3d( 80px, -97px, 32px );  }
+.burnttoast1 .front {width: 100%; transform: rotateY( 0deg ) translate3d( 0px, 0px, 12px ); }
+.burnttoast1 .back {width: 100%; transform: rotateY( 180deg ) translate3d( 0px, 0px,12px ); }
+.burnttoast1 .top { width: 100%;transform: rotateX( 90deg )  translate3d( 0px, 0px, 12px ); }
+
+.burnttoast1 .left { width: 17.2%;transform: rotateY( -90deg ) translate3d( 0px, 0px, 12px ); }
+.burnttoast1 .right { width: 17.2%;transform: rotateY( 90deg ) translate3d( 0px, 0px, 130px ); }
+
+.toast  .toast1  .rawtoast1 .face { opacity: 1;}
+.toast  .toast1  .cooktoast1 .face { opacity: 0;}
+.toast  .toast1  .burnttoast1 .face { opacity: 0;}
+
+
+/*.toast  .toast2 .object { transform: translate3d( 80px, -50px, -32px );} */
+	
+ .tstrInsideON .face{opacity: 0.0;}
+
+
+.pedal { width: 120px; height: 50px;  transform: rotateY( 0deg ) translate3d( -30px, 35px, 0px );   }
+.pedal .front {width:25%; transform: rotateY( 0deg ) translate3d( 0px, 0px, 30px ); }
+.pedal .back {width:25%; transform: rotateY( 180deg ) translate3d( 0px, 0px, 30px ); }
+.pedal .top { width:25%;transform: rotateX( 90deg ) translate3d( 0px, 0px, 30px ); }
+.pedal .bottom { width:25%;transform: rotateX( -90deg ) translate3d( 0px, 0px, -25px ); }
+.pedal .left { width: 50% ;transform: rotateY( -90deg ) translate3d( 0px, 0px, 30px ); }
+.pedal .right {  width: 75%	 ;transform: rotateY( 90deg ) translate3d( 0px, 0px, 0px ); }
+
+
+
+.head { width: 120px; height: 50px; }
+.head .front { transform: rotateY( 0deg ) translate3d( 0px, 0px, 150px ); }
+.head .back { transform: rotateY( 180deg ) translate3d( 0px, 0px, 150px ); }
+.head .top { transform: rotateX( 90deg ) translate3d( 0px, 0px, 150px ); }
+.head .bottom { transform: rotateX( -90deg ) translate3d( 0px, 0px, 60px ); }
+.head .left { transform: rotateY( -90deg ) translate3d( 0px, -40px, 150px ); }
+.head .right { transform: rotateY( 90deg ) translate3d( 0px, -40px, 150px ); }
+
+
+
+
+
+
+
+

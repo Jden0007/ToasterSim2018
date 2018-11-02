@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Toaster</title>
+  <link rel="stylesheet" href="3d.css"/>
+</head>
+<body>
+	
+	
+	<audio id="sound" src="sounds/music.mp3"  autoplay></audio>
+	<div id = "buttons">
+<button class="musicBTN" onclick="document.getElementById('sound').play()">Play</button> 
+  <button class="musicBTN" onclick="document.getElementById('sound').pause()">Pause</button> </div>
+
+
+	<!--<audio autoplay="autoplay" controls="controls">
+     <source src="sounds/woof.mp3" />  
+
+ </audio>
+-->	
+	 <div class="scene">
+
+ <div class="object toaster">
+    <img class="face front" src="images/tsr_sides.jpg" />
+    <img class="face back" src="images/tsr_sides.jpg" />
+    <img class="face left" src="images/tsr_lft.jpg" />
+		
+    <img class="face right" src="images/tsr_rht.jpg" />
+    <img class="face top" src="images/tsr_top.png" />
+    
+  </div>
+
+
+		  <div class="object button">
+    <img class="face front" src="images/button_front.jpg" />
+    
+    <img class="face left" src="images/button_side.jpg" />
+    <img class="face right" src="images/button_side.jpg" />
+    <img class="face top" src="images/button_top.jpg" />
+    
+  </div>
+		  <div class="object dial">
+    <img class="face front" src="images/dial2.png" />
+   
+  </div>
+
+	 
+	<div class="object tstrInsideOFF">
+    <img class="face front" src="images/tstINS_sideOFF.jpg" />
+    <img class="face back" src="images/tstINS_sideOFF.jpg" />
+    <img class="face midback" src="images/tstINS_sideOFF.jpg" />
+    <img class="face midfront" src="images/tstINS_sideOFF.jpg" />
+	<img class="face left" src="images/tstINS_tall_OFF.jpg" />
+    <img class="face right" src="images/tstINS_tall_OFF.jpg" />
+  </div>	 
+		 
+		 <div class="object tstrInsideON">
+    <img class="face front " src="images/tstINS_side_ON.jpg" />
+    <img class="face back" src="images/tstINS_side_ON.jpg" />
+    <img class="face midback" src="images/tstINS_side_ON.jpg" />
+    <img class="face midfront" src="images/tstINS_side_ON.jpg" />
+	<img class="face left" src="images/tstINS_tall_ON.jpg" />
+    <img class="face right" src="images/tstINS_tall_ON.jpg" />
+  </div>	 
+			<div class="toast">  
+		 <div class="toast1"> 
+		 <div class="object rawtoast1">
+   <img class="face front" src="images/tst_raw_front.jpg" />
+    <img class="face back" src="images/tst_raw_front.jpg" />
+    <img class="face left" src="images/tst_raw_crust.jpg" />
+    <img class="face right" src="images/tst_raw_crust.jpg" />
+    <img class="face top" src="images/tst_raw_crusttop.jpg" />
+    
+  </div>
+	
+		 <div class="object cooktoast1">
+   <img class="face front" src="images/tst_cook_front.jpg" />
+    <img class="face back" src="images/tst_cook_front.jpg" />
+    <img class="face left" src="images/tst_cook_crust.jpg" />
+    <img class="face right" src="images/tst_cook_crust.jpg" />
+    <img class="face top" src="images/tst_cook_crusttop.jpg" />
+    
+  </div>
+		<div class="object burnttoast1">
+   <img class="face front" src="images/tst_burnt_front.jpg" />
+    <img class="face back" src="images/tst_burnt_front.jpg" />
+    <img class="face left" src="images/tst_burnt_crust.jpg" />
+    <img class="face right" src="images/tst_burnt_crust.jpg" />
+    <img class="face top" src="images/tst_burnt_crusttop.jpg" />
+    
+  </div> 
+			 </div>
+				<div class="toast2"> 
+		 <div class="object rawtoast2">
+   <img class="face front" src="images/tst_raw_front.jpg" />
+    <img class="face back" src="images/tst_raw_front.jpg" />
+    <img class="face left" src="images/tst_raw_crust.jpg" />
+    <img class="face right" src="images/tst_raw_crust.jpg" />
+    <img class="face top" src="images/tst_raw_crusttop.jpg" />
+    
+  </div>
+	
+		 <div class="object cooktoast2">
+   <img class="face front" src="images/tst_cook_front.jpg" />
+    <img class="face back" src="images/tst_cook_front.jpg" />
+    <img class="face left" src="images/tst_cook_crust.jpg" />
+    <img class="face right" src="images/tst_cook_crust.jpg" />
+    <img class="face top" src="images/tst_cook_crusttop.jpg" />
+    
+  </div>
+		<div class="object burnttoast2">
+   <img class="face front" src="images/tst_burnt_front.jpg" />
+    <img class="face back" src="images/tst_burnt_front.jpg" />
+    <img class="face left" src="images/tst_burnt_crust.jpg" />
+    <img class="face right" src="images/tst_burnt_crust.jpg" />
+    <img class="face top" src="images/tst_burnt_crusttop.jpg" />
+    
+  </div> 
+				</div>
+				</div>
+	 
+		 <div class="object pedal">
+    <img class="face front" src="images/pedal_shortside.jpg" />
+    <img class="face back" src="images/pedal_shortside.jpg" />
+    <img class="face left" src="images/pedal_longside.jpg" />
+    
+    <img class="face top" src="images/pedal_topbot.jpg" />
+    
+  </div>
+		--> 
+		 
+		
+  </div>
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="3d.js"></script>
+</body>
+</html>
